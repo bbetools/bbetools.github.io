@@ -22,11 +22,13 @@
 #result.shown{
     display:initial;
 }
-.numres {
+.numres,.numres2{
     margin-top: 0.5em;
     font-size: 24pt;
     font-weight: bold;
     overflow-wrap:break-word;
+}
+.numres {
     color:var(--c4);
 }
 td {
