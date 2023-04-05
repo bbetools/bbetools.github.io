@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../../scripts/mainfunc.js"></script>
+    <script>
+        const field={
+            hitung:function(){
+                let r=document.getElementById('result');
+                if(!r.classList.contains('shown')){
+                    r.classList.add('shown');
+                }
+            },
+            clear:function(){document.getElementById('namabarang').value=document.getElementById('jumlahperkemasan').value=document.getElementById('harga1kemasan').value=document.getElementById('result').textContent='';}
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Harga jual minimum</h1>
+        <section class="form-container">
+            <div class="form-line">
+                <label for="harga">Harga beli</label>
+                <input type="text" name="harga" id="harga">
+            </div>
+            <button class="type-1-btn" onclick="field.hitung()">Hitung</button>
+        </section>
+        <section id="result">
+            <table>
+                <tr>
+                    <td>Harga beli</td>
+                    <td class="tidu">:</td>
+                    <td><span id="harga-beli"></span></td>
+                </tr>
+                <tr>
+                    <td>Harga beli</td>
+                    <td class="tidu">:</td>
+                    <td><span id="harga-beli"></span></td>
+                </tr>
+            </table>
+        </section>
+        <button class="type-1-btn" onclick="field.clear()">Bersihkan</button>
+    </div>
+    <script>var ptype='app';gen.head.font.exec();gen.head.style.exec();gen.head.met.exec();gen.head.title();gen.nav();gen.nav('footer');</script>
+</body>
+</html>

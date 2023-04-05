@@ -1,0 +1,1 @@
+section.first{display:flex;justify-content:center;gap:5em;height:500px;align-items:center;font-size:16pt;}#app-list li:not(:last-child){margin-bottom:30px}@media(max-width:800px){section.first{flex-direction:column;gap:1.5em;}}

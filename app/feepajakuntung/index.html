@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/scripts/mainfunc.js"></script>
+    <script>
+        const field={
+            hitung:function(){
+                let r=document.getElementById('result'),h=parseInt(document.getElementById('harga').value),ha=document.getElementById('harga-awal'),f=document.getElementById('fee'),uk=document.getElementById('kotor'),ph=document.getElementById('ppnharga'),hp=document.getElementById('hargaakhir'),fee,kotor,ppn,akhir;
+                fee=0.15*h;
+                kotor=h-fee;
+                ppn=0.11*h;
+                akhir=h+ppn;
+                ha.textContent=h.toLocaleString('id');
+                f.textContent=fee.toLocaleString('id');
+                uk.textContent=kotor.toLocaleString('id');
+                ph.textContent=ppn.toLocaleString('id');
+                hp.textContent=akhir.toLocaleString('id');
+                if(!r.classList.contains('shown')){
+                    r.classList.add('shown');
+                }
+            },
+            clear:function(){
+                let r=document.getElementById('result');
+                if(r.classList.contains('shown')){r.classList.remove('shown');}
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Penghitung fee, pajak, dan untung</h1>
+        <section class="form-container">
+            <div class="form-line">
+                <label for="harga">Harga</label>
+                <input type="number" name="harga" id="harga">
+            </div>
+            <button class="type-1-btn" onclick="field.hitung()">Hitung</button>
+        </section>
+        <section id="result">
+            <table>
+                <tr>
+                    <td>Harga awal</td>
+                    <td class="tidu">:</td>
+                    <td><span id="harga-awal"></span></td>
+                </tr>
+                <tr>
+                    <td>fee (15%)</td>
+                    <td class="tidu">:</td>
+                    <td><span id="fee"></span></td>
+                </tr>
+                <tr>
+                    <td>Untung kotor</td>
+                    <td class="tidu">:</td>
+                    <td><span id="kotor" class="numres"></span></td>
+                </tr>
+                <tr>
+                    <td>PPn (11%)</td>
+                    <td class="tidu">:</td>
+                    <td><span id="ppnharga"></span></td>
+                </tr>
+                <tr>
+                    <td>Harga jual + pajak</td>
+                    <td class="tidu">:</td>
+                    <td><span id="hargaakhir"></span></td>
+                </tr>
+            </table>
+        </section>
+        <button class="type-1-btn" onclick="field.clear()">Bersihkan</button>
+    </div>
+    <script>var ptype='app';gen.head.font.exec();gen.head.style.exec();gen.head.met.exec();gen.head.title();gen.nav();gen.nav('footer');</script>
+</body>
+</html>

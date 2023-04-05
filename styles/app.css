@@ -1,0 +1,54 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    align-items: flex-start;
+}h1.title{margin:1.4em 0;}h2.inH{margin:1.2em 0;}.container {
+    margin: 2em auto;
+    width: 55vw;
+}.form-line {
+    display: flex;
+    gap: 1em;
+    flex-direction: row;
+    align-items: center;
+}
+.form-line label {
+    width: 150px;
+}
+#result {
+    margin-top: 2em;
+    display:none;
+}
+#result.shown{
+    display:initial;
+}
+.numres {
+    margin-top: 0.5em;
+    font-size: 24pt;
+    font-weight: bold;
+    overflow-wrap:break-word;
+    color:var(--c4);
+}
+td {
+    padding: 5px;
+    box-sizing: border-box;
+}
+input[type=number] {
+    background: var(--c3);
+    color: var(--c4);
+    height: 2em;
+    font-size: 20px;
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 10px 0 10px 10px;
+}
+@media (max-width:800px) {
+    .container {
+        width: 92vw;
+    }
+    .form-line{
+        gap: 0.5em;
+        flex-direction: column;
+        align-items:normal;
+    }
+}

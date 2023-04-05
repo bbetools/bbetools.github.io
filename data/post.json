@@ -1,0 +1,8 @@
+[
+    {"name":"Penjumlahan berurutan","link":"/app/penjumlahan-berurutan"},
+    {"name":"Perkalian faktorial","link":"/app/perkalian-faktorial"},
+    {"name":"Harga barang per unit","link":"/app/harga-per-unit"},
+    {"name":"Penghitung diskon","link":"/app/hitung-diskon"},
+    {"name":"Penghitung kebutuhan BBM","link":"/app/kebutuhan-bahan-bakar"},
+    {"name":"Penghitung harga setelah PPN 11%","link":"/app/ppn11persen"}
+]
