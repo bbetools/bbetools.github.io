@@ -3,9 +3,11 @@
 <head>
     <script src="/scripts/mainfunc.js"></script>
     <script>
+        let field=document.getElementById('la-resource-form');
+        field.addEventListener('submit',(e)=>{e.preventDefault();})
         const field={
             hitung:function(){
-                let r=document.getElementById('result'),h=parseInt(document.getElementById('harga').value),ha=document.getElementById('harga-awal'),f=document.getElementById('fee'),uk=document.getElementById('kotor'),ph=document.getElementById('ppnharga'),hp=document.getElementById('hargaakhir'),fee,kotor,ppn,akhir;
+                let r=document.getElementById('result'),h=parseInt(field.harga.value),ha=document.getElementById('harga-awal'),f=document.getElementById('fee'),uk=document.getElementById('kotor'),ph=document.getElementById('ppnharga'),hp=document.getElementById('hargaakhir'),fee,kotor,ppn,akhir;
                 fee=0.15*h;
                 kotor=h-fee;
                 ppn=0.11*h;
@@ -29,13 +31,13 @@
 <body>
     <div class="container">
         <h1 class="title">Penghitung fee, pajak, dan untung</h1>
-        <section class="form-container">
+        <form class='form1'>
             <div class="form-line">
                 <label for="harga">Harga</label>
                 <input type="number" name="harga" id="harga">
             </div>
             <button class="type-1-btn" onclick="field.hitung()">Hitung</button>
-        </section>
+        </form>
         <section id="result">
             <table>
                 <tr>
