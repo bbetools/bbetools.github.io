@@ -28,7 +28,7 @@
                 if(!r.classList.contains('shown')){
                     r.classList.add('shown');
                 }
-                searchParams.set("harga", akhir);
+                searchParams.set("harga", h);
                 var newRelativePathQuery = window.location.pathname + '?' + searchParams.toString();
                 history.pushState(null,'', newRelativePathQuery);
             },
