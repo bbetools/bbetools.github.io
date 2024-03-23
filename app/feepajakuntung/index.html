@@ -3,7 +3,7 @@
 <head>
     <script src="/scripts/mainfunc.js"></script>
     <script>
-        const searchParams = new URLSearchParams(window.location.search);
+        let searchParams = new URLSearchParams(window.location.search);
         let aa;
         window.onload=function(){
             aa=document.getElementById('form-11pct');
@@ -28,6 +28,8 @@
                 if(!r.classList.contains('shown')){
                     r.classList.add('shown');
                 }
+                searchParams.set("harga", akhir);
+                window.location.search = searchParams.toString();
             },
             clear:function(){
                 let r=document.getElementById('result');
