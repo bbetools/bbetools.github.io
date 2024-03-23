@@ -3,10 +3,15 @@
 <head>
     <script src="/scripts/mainfunc.js"></script>
     <script>
+        const searchParams = new URLSearchParams(window.location.search);
         let aa;
         window.onload=function(){
             aa=document.getElementById('form-11pct');
             aa.addEventListener('submit',(e)=>{e.preventDefault();})
+            if(searchParams.get('harga')>0){
+                aa.harga.value=searchParams.get('harga');
+                field.hitung();
+            }
         }
         const field={
             hitung:function(){
