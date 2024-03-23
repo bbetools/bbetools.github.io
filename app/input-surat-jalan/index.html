@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <script src="/scripts/mainfunc.js"></script>
-    <script src='/scripts/firestore.js'></script>
+    <script type='module' src='/scripts/firestore.js'></script>
     <script>
         let searchParams = new URLSearchParams(window.location.search);
         let aa;
@@ -10,7 +10,7 @@
             aa=document.getElementById('form-input');
             aa.addEventListener('submit',(e)=>{e.preventDefault();})
         }
-        viewFirestoreDB('Surat Jalan Bekri 24 Maret 2024')
+        viewFirestoreDB('Surat Jalan Bekri 24 Maret 2024');
     </script>
 </head>
 <body>
