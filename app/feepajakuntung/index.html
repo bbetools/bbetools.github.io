@@ -29,6 +29,8 @@
                     r.classList.add('shown');
                 }
                 searchParams.set("harga", akhir);
+                var newRelativePathQuery = window.location.pathname + '?' + searchParams.toString();
+                history.pushState(null,'', newRelativePathQuery);
             },
             clear:function(){
                 let r=document.getElementById('result');
