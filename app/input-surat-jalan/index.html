@@ -14,10 +14,11 @@
         window.onload=function(){
             aa=document.getElementById('form-input');
             aa.addEventListener('submit',(e)=>{e.preventDefault();})
+            (async function(){
+                console.log(await getFsDB('Surat Jalan Bekri 24 Maret 2024'));
+            });
         }
-        (async function(){
-            console.log(await getFsDB('Surat Jalan Bekri 24 Maret 2024'));
-        });
+        
     </script>
 </head>
 <body>
