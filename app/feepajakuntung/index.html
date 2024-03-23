@@ -3,8 +3,11 @@
 <head>
     <script src="/scripts/mainfunc.js"></script>
     <script>
-        let aa=document.getElementById('form-11pct');
-        aa.addEventListener('submit',(e)=>{e.preventDefault();})
+        let aa;
+        window.onload=function(){
+            aa=document.getElementById('form-11pct');
+            aa.addEventListener('submit',(e)=>{e.preventDefault();})
+        }
         const field={
             hitung:function(){
                 let r=document.getElementById('result'),h=parseInt(field.harga.value),ha=document.getElementById('harga-awal'),f=document.getElementById('fee'),uk=document.getElementById('kotor'),ph=document.getElementById('ppnharga'),hp=document.getElementById('hargaakhir'),fee,kotor,ppn,akhir;
