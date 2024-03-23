@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <script src="/scripts/mainfunc.js"></script>
+    <script src='/scripts/firestore.js'></script>
     <script>
         let searchParams = new URLSearchParams(window.location.search);
         let aa;
@@ -9,13 +10,13 @@
             aa=document.getElementById('form-input');
             aa.addEventListener('submit',(e)=>{e.preventDefault();})
         }
-        
+        viewFirestoreDB('Surat Jalan Bekri 24 Maret 2024')
     </script>
 </head>
 <body>
     <div class="container">
         <h1 class="title">Surat Jalan Baru</h1>
-        <form class='form1' id='form-11pct'>
+        <form class='form1' id='form-input'>
             <div class="form-line">
                 <label for="harga">Harga</label>
                 <input type="number" name="harga" id="harga">
