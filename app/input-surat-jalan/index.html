@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/scripts/mainfunc.js"></script>
+    <script>
+        let searchParams = new URLSearchParams(window.location.search);
+        let aa;
+        window.onload=function(){
+            aa=document.getElementById('form-input');
+            aa.addEventListener('submit',(e)=>{e.preventDefault();})
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Surat Jalan Baru</h1>
+        <form class='form1' id='form-11pct'>
+            <div class="form-line">
+                <label for="harga">Harga</label>
+                <input type="number" name="harga" id="harga">
+            </div>
+            <button type='submit' class="type-1-btn" onclick="field.hitung()">Hitung</button>
+        </form>
+        <section id="result">
+            <table>
+                <tr>
+                    <td>Harga awal</td>
+                    <td class="tidu">:</td>
+                    <td>Rp<span id="harga-awal"></span></td>
+                </tr>
+                <tr>
+                    <td>fee (15%)</td>
+                    <td class="tidu">:</td>
+                    <td>Rp<span id="fee"></span></td>
+                </tr>
+                <tr class="numres2">
+                    <td>Untung kotor</td>
+                    <td class="tidu">:</td>
+                    <td>Rp<span id="kotor"></span></td>
+                </tr>
+                <tr>
+                    <td>PPn (11%)</td>
+                    <td class="tidu">:</td>
+                    <td>Rp<span id="ppnharga"></span></td>
+                </tr>
+                <tr class="numres">
+                    <td>Harga jual + pajak</td>
+                    <td class="tidu">:</td>
+                    <td class="numres">Rp<span id="hargaakhir"></span></td>
+                </tr>
+            </table>
+        </section>
+        <button class="type-1-btn" onclick="field.clear()">Bersihkan</button>
+    </div>
+    <script>var ptype='app';gen.head.font.exec();gen.head.style.exec();gen.head.met.exec();gen.head.title();gen.nav();gen.nav('footer');</script>
+</body>
+</html>
