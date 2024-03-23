@@ -5,10 +5,7 @@
     <script type='module'>
         import {getFirestoreDB, viewFirestoreDB} from '/scripts/firestore.js';
         window.getFsDB=async function getFsDB(databaseName,condition=null){
-            return getFirestoreDB(databaseName,condition)
-        }
-        window.viewFsDB=async function viewFsDB(databaseName,condition=null){
-            return viewFirestoreDB(databaseName,condition)
+            return await getFirestoreDB(databaseName,condition)
         }
     </script>
     <script>
@@ -18,7 +15,7 @@
             aa=document.getElementById('form-input');
             aa.addEventListener('submit',(e)=>{e.preventDefault();})
         }
-        viewFsDB('Surat Jalan Bekri 24 Maret 2024');
+        console.log(getFsDB('Surat Jalan Bekri 24 Maret 2024'));
     </script>
 </head>
 <body>
